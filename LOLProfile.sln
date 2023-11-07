@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{70E1025D-360A-4CA8-81ED-60238EE8D206}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LOLProfile.Domain", "LOLProfile.Domain\LOLProfile.Domain.csproj", "{C731DB2F-F2DC-49C1-8D65-2F78AB1FDCB7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LOLProfile.Application", "LOLProfile.Application\LOLProfile.Application.csproj", "{BAA0434C-15FE-4AA7-9611-24A793A3270F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LOLProfile.Infra.Data", "LOLProfile.Infra.Data\LOLProfile.Infra.Data.csproj", "{947EED03-04B0-4C59-BB88-9F8900DDE0E3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LOLProfile.Infra.IoC", "LOLProfile.Infra.IoC\LOLProfile.Infra.IoC.csproj", "{AAA35992-135C-4964-AAFC-2162618074E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LOLProfile.API.ZED", "LOLProfile.API.ZED\LOLProfile.API.ZED.csproj", "{765FE328-9206-4A96-88DC-0338244BCE65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C731DB2F-F2DC-49C1-8D65-2F78AB1FDCB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C731DB2F-F2DC-49C1-8D65-2F78AB1FDCB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C731DB2F-F2DC-49C1-8D65-2F78AB1FDCB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C731DB2F-F2DC-49C1-8D65-2F78AB1FDCB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAA0434C-15FE-4AA7-9611-24A793A3270F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAA0434C-15FE-4AA7-9611-24A793A3270F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAA0434C-15FE-4AA7-9611-24A793A3270F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAA0434C-15FE-4AA7-9611-24A793A3270F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{947EED03-04B0-4C59-BB88-9F8900DDE0E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{947EED03-04B0-4C59-BB88-9F8900DDE0E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{947EED03-04B0-4C59-BB88-9F8900DDE0E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{947EED03-04B0-4C59-BB88-9F8900DDE0E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAA35992-135C-4964-AAFC-2162618074E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAA35992-135C-4964-AAFC-2162618074E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAA35992-135C-4964-AAFC-2162618074E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAA35992-135C-4964-AAFC-2162618074E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{765FE328-9206-4A96-88DC-0338244BCE65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{765FE328-9206-4A96-88DC-0338244BCE65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{765FE328-9206-4A96-88DC-0338244BCE65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{765FE328-9206-4A96-88DC-0338244BCE65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C731DB2F-F2DC-49C1-8D65-2F78AB1FDCB7} = {70E1025D-360A-4CA8-81ED-60238EE8D206}
+		{BAA0434C-15FE-4AA7-9611-24A793A3270F} = {70E1025D-360A-4CA8-81ED-60238EE8D206}
+		{947EED03-04B0-4C59-BB88-9F8900DDE0E3} = {70E1025D-360A-4CA8-81ED-60238EE8D206}
+		{AAA35992-135C-4964-AAFC-2162618074E8} = {70E1025D-360A-4CA8-81ED-60238EE8D206}
+		{765FE328-9206-4A96-88DC-0338244BCE65} = {70E1025D-360A-4CA8-81ED-60238EE8D206}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2938DDE9-51C6-4436-9A5D-2314D75EF591}
+	EndGlobalSection
+EndGlobal
