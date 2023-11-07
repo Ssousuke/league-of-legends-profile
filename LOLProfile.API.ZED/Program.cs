@@ -1,4 +1,6 @@
 using LOLProfile.API.ZED.HttpService;
+using LOLProfile.API.ZED.RestService;
+using LOLProfile.API.ZED.RestService.IRestService;
 using LOLProfile.Infra.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddInfraestructure(builder.Configuration);
 builder.Services.AddScoped<IRiotHttpService, RiotHttpService>();
+builder.Services.AddScoped<ISummonerRestServices, SummonerRestServices>();
+builder.Services.AddScoped<ILeagueRestServices, LeagueRestService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
