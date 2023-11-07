@@ -10,6 +10,6 @@ namespace LOLProfile.Application.Services.IServices
 {
     public interface ILeagueService
     {
-        public Task<LeagueDTO> GetLeagueasync(string summonerId);
+        public Task<List<LeagueDTO>> GetLeagueasync(string summonerId);
     }
 }

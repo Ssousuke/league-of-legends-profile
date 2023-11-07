@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using LOLProfile.Application.DTO;
+using LOLProfile.Domain.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,19 +11,19 @@ namespace LOLProfile.Application.Services.IServices
 {
     public class LeagueService : ILeagueService
     {
-        private readonly ILeagueService _leagueService;
+        private readonly ILeagueRepository _leagueRepository;
         private readonly IMapper _mapper;
 
-        public LeagueService(ILeagueService leagueService, IMapper mapper)
+        public LeagueService(ILeagueRepository leagueRepository, IMapper mapper)
         {
-            _leagueService = leagueService;
+            _leagueRepository = leagueRepository;
             _mapper = mapper;
         }
 
-        public async Task<LeagueDTO> GetLeagueasync(string summonerId)
+        public async Task<List<LeagueDTO>> GetLeagueasync(string summonerId)
         {
-            var league = await _leagueService.GetLeagueasync(summonerId);
-            return _mapper.Map<LeagueDTO>(league);
+            var league = await _leagueRepository.GetLeagueAsync(summonerId);
+            return _mapper.Map<List<LeagueDTO>>(league);
         }
     }
 }
