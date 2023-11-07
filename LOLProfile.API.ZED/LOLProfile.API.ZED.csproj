@@ -19,8 +19,4 @@
     <ProjectReference Include="..\LOLProfile.Infra.IoC\LOLProfile.Infra.IoC.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
-
 </Project>
