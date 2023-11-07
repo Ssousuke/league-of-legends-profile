@@ -19,9 +19,9 @@ namespace LOLProfile.Infra.Data.Repository
             _context = context;
         }
 
-        public async Task<League> GetLeagueAsync(string summonerId)
+        public async Task<List<League>> GetLeagueAsync(string summonerId)
         {
-            return await _context.Leagues.SingleOrDefaultAsync(x => x.SummonerId.Equals(summonerId));
+            return await _context.Leagues.Where(x => x.SummonerId.Equals(summonerId)).ToListAsync();
         }
     }
 }
