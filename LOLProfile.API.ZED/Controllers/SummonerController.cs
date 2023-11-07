@@ -1,4 +1,5 @@
 ﻿using LOLProfile.API.ZED.HttpService;
+using LOLProfile.API.ZED.RestService.IRestService;
 using LOLProfile.Application.DTO;
 using LOLProfile.Application.Services.IServices;
 using LOLProfile.Domain.Models;
@@ -13,45 +14,20 @@ namespace LOLProfile.API.ZED.Controllers
     [ApiController]
     public class SummonerController : ControllerBase
     {
-        private readonly ISummonerService _summonerService;
-        private readonly IRiotHttpService _httpService;
-        private readonly IConfiguration _configuration;
+        private readonly ISummonerRestServices _service;
 
-        public SummonerController(ISummonerService summonerService, IRiotHttpService httpService, IConfiguration configuration)
+        public SummonerController(ISummonerRestServices service)
         {
-            _summonerService = summonerService;
-            _httpService = httpService;
-            _configuration = configuration;
+            _service = service;
         }
 
         [HttpGet("buscar-invocador/{nickName}")]
         public async Task<IActionResult> GetSummonerAsync(string nickName)
         {
-            var summoner = await _summonerService.GetSummonerAsync(nickName);
-
+            var summoner = await _service.GetSummonerAsync(nickName);
             if (summoner is null)
-            {
-                HttpRequestMessage request = new HttpRequestMessage();
-                request.Method = HttpMethod.Get;
-                request.Headers.Add("X-Riot-Token", _configuration.GetSection("XRiotToken").Value.ToString());
-                request.RequestUri = new Uri($"{_configuration.GetSection("RiotSummonerUrL").Value}/{nickName}");
+                return BadRequest("Não foi possível completar a requisição.");
 
-                using (HttpResponseMessage response = await _httpService.SendAsync(request))
-                {
-                    string contentResponse = await response.Content.ReadAsStringAsync();
-                    SummonerDTO? json = JsonSerializer.Deserialize<SummonerDTO>(contentResponse);
-
-                    if (response.IsSuccessStatusCode)
-                    {
-                        SummonerDTO? summonerResquest = json;
-                        return Ok(summonerResquest);
-                    }
-                    else
-                    {
-                        return BadRequest(contentResponse);
-                    }
-                }
-            }
             return Ok(summoner);
         }
     }
