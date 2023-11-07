@@ -33,6 +33,8 @@ Pesquise o jogador pelo nick name e veja todos as informações do perfil public
 
 Foi utilizado a [RIOT API](https://developer.riotgames.com/), para obter os dados do jogador. E além disso foi utilizado as seguintes tecnologias:
 
+Para rodar o projeto é necessário criar uma conta, e gerar a X-Riot-Token, para ralizar as requisições para o RIOT API. Se você já tiver a X-Riot-Token é só adicionar no appsettings na seção "XRiotToken".
+
 - C# .NET 7
 - Docker
 - SQL Server
