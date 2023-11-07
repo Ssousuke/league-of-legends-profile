@@ -9,6 +9,6 @@ namespace LOLProfile.Domain.Interface
 {
     public interface ILeagueRepository
     {
-        public Task<League> GetLeagueAsync(string summonerId);
+        public Task<List<League>> GetLeagueAsync(string summonerId);
     }
 }
