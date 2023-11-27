@@ -2,7 +2,8 @@
 ## OBS
 - Não adianta tentar utilizar o XRiotToken, ele só dura 24 horas, mas você pode gerar o seu proprio entrando no portal do desenvolvedor da RIOT GAMES.
 
-Pesquise o jogador pelo nick name e veja todos as informações do perfil publico dele.
+
+## Pesquise o jogador pelo nick name e veja todos as informações do perfil publico dele.
 
 - Rank (Flex / Solo Duo)
 - Vitorias / Derrotas
